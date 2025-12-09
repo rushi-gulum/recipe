@@ -1,0 +1,216 @@
+{
+  "info": {
+    "name": "Recipe RAG API",
+    "description": "API collection for Recipe RAG system with text search and ingredient-based recipe finding",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": ["{{base_url}}"],
+          "path": ["health"]
+        },
+        "description": "Check if the API server is running and healthy"
+      },
+      "response": [
+        {
+          "name": "Success Response",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n    \"status\": \"ok\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Search Recipes by Text",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"query\": \"pasta with vegetables\",\n    \"k\": 5\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/search",
+          "host": ["{{base_url}}"],
+          "path": ["search"]
+        },
+        "description": "Search for recipes using semantic text search. Provide a natural language query describing what you want to cook."
+      },
+      "response": [
+        {
+          "name": "Successful Search",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"query\": \"pasta with vegetables\",\n    \"k\": 5\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/search",
+              "host": ["{{base_url}}"],
+              "path": ["search"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n    \"query\": \"pasta with vegetables\",\n    \"results\": [\n        {\n            \"id\": \"recipe_01::chunk_0\",\n            \"filename\": \"recipe_01.txt\",\n            \"content\": \"Title: Vegetable Pasta\\n\\nIngredients:\\n- 300g pasta\\n- Mixed vegetables...\",\n            \"score\": 0.85,\n            \"distance\": 0.15\n        }\n    ],\n    \"count\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "Find Recipe by Ingredients",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"ingredients\": [\"tomato\", \"onion\", \"garlic\", \"pasta\"]\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/find-recipe",
+          "host": ["{{base_url}}"],
+          "path": ["find-recipe"]
+        },
+        "description": "Find the best recipe match based on available ingredients. Returns matched ingredients, missing ingredients, and the complete recipe."
+      },
+      "response": [
+        {
+          "name": "Recipe Found",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"ingredients\": [\"tomato\", \"onion\", \"garlic\", \"pasta\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/find-recipe",
+              "host": ["{{base_url}}"],
+              "path": ["find-recipe"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n    \"recipe_id\": \"recipe_15\",\n    \"score\": 0.92,\n    \"recipe\": \"Title: Simple Tomato Pasta\\n\\nIngredients:\\n- 300g pasta\\n- 2 large tomatoes\\n- 1 onion\\n- 3 cloves garlic\\n- 2 tbsp olive oil\\n- Salt and pepper\\n\\nInstructions:\\n1. Boil pasta according to package instructions\\n2. Sauté onion and garlic in olive oil\\n3. Add chopped tomatoes and cook until soft\\n4. Season with salt and pepper\\n5. Toss with cooked pasta and serve\",\n    \"matched_ingredients\": [\"tomato\", \"onion\", \"garlic\", \"pasta\"],\n    \"missing_ingredients\": [\"olive oil\", \"salt\", \"pepper\"]\n}"
+        }
+      ]
+    },
+    {
+      "name": "API Root",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/",
+          "host": ["{{base_url}}"],
+          "path": [""]
+        },
+        "description": "Get basic information about the Recipe RAG API"
+      },
+      "response": [
+        {
+          "name": "API Info",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/",
+              "host": ["{{base_url}}"],
+              "path": [""]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n    \"message\": \"Recipe RAG API is running\"\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Set base URL if not already set",
+          "if (!pm.environment.get('base_url')) {",
+          "    pm.environment.set('base_url', 'http://localhost:8000');",
+          "}"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000",
+      "type": "string",
+      "description": "Base URL for the Recipe RAG API"
+    }
+  ]
+}

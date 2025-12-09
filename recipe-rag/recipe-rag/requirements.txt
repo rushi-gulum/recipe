@@ -1,0 +1,48 @@
+# Recipe RAG System Requirements
+
+# Core FastAPI Dependencies
+fastapi==0.112.0
+uvicorn[standard]==0.30.1
+pydantic==2.7.4
+python-dotenv==1.0.0
+loguru==0.7.2
+
+# HTTP and Request Handling
+requests==2.31.0
+httpx==0.27.0
+tqdm==4.66.1
+python-multipart==0.0.7
+
+# Streamlit Frontend
+streamlit==1.35.0
+plotly==5.17.0
+
+# Testing Framework
+pytest==7.4.2
+pytest-asyncio==0.23.2
+
+# AI/ML Core
+openai==1.60.0
+
+# Vector Database
+chromadb==0.4.24
+
+# LangChain Components
+langchain==0.2.10
+langchain-core==0.2.23
+langchain-community==0.2.10
+langchain-chroma==0.1.4
+
+# Data Processing
+numpy==1.26.4
+pandas==2.2.2
+pickle5==0.0.11
+
+# RAG Evaluation (Optional)
+scikit-learn==1.3.2
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# Optional: For advanced text processing
+spacy==3.7.2
+nltk==3.8.1

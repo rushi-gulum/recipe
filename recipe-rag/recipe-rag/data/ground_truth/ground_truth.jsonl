@@ -1,0 +1,5 @@
+{"query": "vegetarian pasta recipe", "relevant_docs": ["recipe_01.txt", "recipe_07.txt", "recipe_29.txt"], "description": "Looking for vegetarian pasta dishes"}
+{"query": "quick dinner ideas", "relevant_docs": ["recipe_01.txt", "recipe_06.txt", "recipe_26.txt", "recipe_07.txt"], "description": "Fast meals for busy weeknights"}
+{"query": "italian carbonara", "relevant_docs": ["recipe_01.txt", "recipe_25.txt", "recipe_29.txt"], "description": "Traditional Italian carbonara recipe"}
+{"query": "healthy bowl recipe", "relevant_docs": ["recipe_47.txt", "recipe_05.txt", "recipe_08.txt"], "description": "Nutritious bowl meals"}
+{"query": "grain bowl recipe", "relevant_docs": ["recipe_21.txt", "recipe_36.txt", "recipe_34.txt"], "description": "Recipes featuring grains like rice"}

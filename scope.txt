@@ -1,0 +1,3 @@
+- user new recipes ingest into vectordb
+- building agents to order missing ingredients from zepto, blinkit
+- ingredient list so user directly tick mark ingredients

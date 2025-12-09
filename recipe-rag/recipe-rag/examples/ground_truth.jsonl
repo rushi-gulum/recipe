@@ -1,0 +1,5 @@
+{"query": "vegetarian pasta recipe", "relevant_docs": ["recipe_02.txt"], "description": "Looking for vegetarian pasta dishes"}
+{"query": "quick dinner ideas", "relevant_docs": ["recipe_01.txt", "recipe_02.txt"], "description": "Fast meals for busy weeknights"}
+{"query": "italian carbonara", "relevant_docs": ["recipe_01.txt"], "description": "Traditional Italian carbonara recipe"}
+{"query": "healthy bowl recipe", "relevant_docs": ["recipe_02.txt"], "description": "Nutritious bowl meals"}
+{"query": "quinoa recipes", "relevant_docs": ["recipe_02.txt"], "description": "Recipes featuring quinoa"}

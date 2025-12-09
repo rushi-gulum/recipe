@@ -1,0 +1,104 @@
+{
+  "metrics": {
+    "recall_at_1": 0.1833333333333333,
+    "recall_at_5": 0.6333333333333333,
+    "recall_at_10": 0.6333333333333333,
+    "mrr": 0.74,
+    "ndcg_at_5": 0.6122417143524048,
+    "ndcg_at_10": 0.6122417143524048
+  },
+  "evaluation_data": [
+    {
+      "query": "vegetarian pasta recipe",
+      "retrieved_docs": [
+        "recipe_07.txt",
+        "recipe_01.txt",
+        "recipe_29.txt",
+        "recipe_37.txt",
+        "recipe_26.txt",
+        "recipe_13.txt"
+      ],
+      "ground_truth": [
+        "recipe_01.txt",
+        "recipe_07.txt",
+        "recipe_29.txt"
+      ]
+    },
+    {
+      "query": "quick dinner ideas",
+      "retrieved_docs": [
+        "recipe_06.txt",
+        "recipe_26.txt",
+        "recipe_25.txt",
+        "recipe_36.txt",
+        "recipe_38.txt",
+        "recipe_30.txt",
+        "recipe_31.txt",
+        "recipe_22.txt",
+        "recipe_13.txt"
+      ],
+      "ground_truth": [
+        "recipe_01.txt",
+        "recipe_06.txt",
+        "recipe_26.txt",
+        "recipe_07.txt"
+      ]
+    },
+    {
+      "query": "italian carbonara",
+      "retrieved_docs": [
+        "recipe_07.txt",
+        "recipe_01.txt",
+        "recipe_37.txt",
+        "recipe_26.txt",
+        "recipe_29.txt"
+      ],
+      "ground_truth": [
+        "recipe_01.txt",
+        "recipe_25.txt",
+        "recipe_29.txt"
+      ]
+    },
+    {
+      "query": "healthy bowl recipe",
+      "retrieved_docs": [
+        "recipe_47.txt",
+        "recipe_05.txt",
+        "recipe_36.txt",
+        "recipe_30.txt",
+        "recipe_40.txt",
+        "recipe_13.txt",
+        "recipe_49.txt",
+        "recipe_12.txt"
+      ],
+      "ground_truth": [
+        "recipe_47.txt",
+        "recipe_05.txt",
+        "recipe_08.txt"
+      ]
+    },
+    {
+      "query": "grain bowl recipe",
+      "retrieved_docs": [
+        "recipe_35.txt",
+        "recipe_49.txt",
+        "recipe_47.txt",
+        "recipe_30.txt",
+        "recipe_36.txt",
+        "recipe_31.txt",
+        "recipe_33.txt",
+        "recipe_40.txt"
+      ],
+      "ground_truth": [
+        "recipe_21.txt",
+        "recipe_36.txt",
+        "recipe_34.txt"
+      ]
+    }
+  ],
+  "summary": {
+    "total_queries": 5,
+    "successful_queries": 5,
+    "success_rate": 1.0
+  }
+}

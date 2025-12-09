@@ -1,0 +1,39 @@
+# Sample Instructions
+
+This folder contains sample data and instructions for using the Recipe RAG system.
+
+## Recipe Format
+
+Recipe files should be saved as `.txt` files in the `data/recipes/` directory with the following structure:
+
+```
+# Recipe Title
+
+*Ingredients:*
+- Ingredient 1
+- Ingredient 2
+- ...
+
+*Instructions:*
+1. Step 1
+2. Step 2
+3. ...
+
+*Prep Time: X minutes*
+*Cook Time: Y minutes*
+*Serves: Z*
+```
+
+## Adding New Recipes
+
+1. Create a new `.txt` file in the `data/recipes/` directory
+2. Follow the format above
+3. Use descriptive filenames (e.g., `chicken_tikka_masala.txt`)
+4. Restart the RAG system to re-index the new recipes
+
+## Tips
+
+- Include relevant tags and keywords in your recipes
+- Be specific about ingredients and quantities
+- Include cooking methods and cuisine types
+- Add difficulty level and dietary information when relevant
